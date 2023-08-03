@@ -125,6 +125,29 @@ li:hover {
 	text-align: center;
 	margin-bottom: 1em;
 }
+
+.buttons{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 40px;
+}
+button{
+	color: #1D6154;
+	background-color: white;
+	border-radius: 25px;
+	border : 1px solid #1D6154;
+	margin: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-size: 16px;
+	font-weight: 700;
+}
+button:hover{
+	color: white;
+	background-color:#1D6154;
+}
 .gallery {
 	width: 100%;
 	display: grid;
@@ -186,3 +209,36 @@ footer nav ul {
 	margin: 2em
 }
 
+/*_____MODALE_________*/
+
+
+.modal {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	width:100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+}
+
+.modal-wrapper{
+	background-color: #fff;
+	width: 600px;
+	height: 400px;
+	max-width:calc(100vw -20px);
+	max-height: calc(100vh - 20px);
+	overflow: auto;
+	padding: 20px;
+}
+
+
+.modal{
+	display: none;
+}
+
+.hidden{
+	display:none;
+}

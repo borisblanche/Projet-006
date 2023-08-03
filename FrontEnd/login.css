@@ -1,0 +1,99 @@
+body {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+section {
+	margin: 50px 0
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C;
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+    
+;
+}
+
+h2{
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+li:hover {
+	color: #B1663C;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    
+}
+.login{
+    text-align: center;
+    flex-direction: column;
+    
+}
+
+
+label{
+    font-family: 'Syne';
+	font-weight: 300;
+	font-size: 14px;
+    display: flex;
+}
+input{
+    width: 300px;
+    height: 40px;
+    border: 1px solid lightgray;
+    box-shadow: 1px 2px 1px  lightgray;
+}
+.btn{
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+	padding-bottom: 10px;
+    width: 160px;
+    background-color: #1D6154;
+    color: white;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+a{
+    color: black;
+}
+#erreur{
+	color: red;
+}
+footer{
+    position: absolute;
+    right: 100px;
+    bottom: 20px;
+}
