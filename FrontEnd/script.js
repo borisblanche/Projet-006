@@ -123,20 +123,17 @@ boutonappartements.addEventListener("click", afficherAppartements);
 const boutonhotels = document.querySelector(".btn-hotels");
 boutonhotels.addEventListener("click", afficherHotels);
 
-
-
-function afficherLienModale() {
-  var token = localStorage.getItem("token");
-  var openModalLink = document.getElementById("openModalLink");
-
-  if (token && openModalLink) {
-      openModalLink.classList.remove("hidden");
-  }
-  else {
-    openModalLink.classList.add("hidden");
+ function afficherLienModale() {
+  const  token = localStorage.getItem("token");
+  const afficherBtnModifier = document.getElementById("myBtn"); // Remplacez "myBtn" par l'ID réel de votre bouton
+  
+  if (token && afficherBtnModifier) {
+    myBtn.classList.remove("hidden");
+   
+  } else {
+    myBtn.classList.add("hidden");
   }
 }
+window.addEventListener("load", afficherLienModale);
+
   
-document.addEventListener("DOMContentLoaded", function() {
-  afficherLienModale();
-});

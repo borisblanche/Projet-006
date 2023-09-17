@@ -1,4 +1,5 @@
-    document.getElementById("connection").addEventListener("submit", function (e) {
+
+document.getElementById("connection").addEventListener("submit", function (e) {
         e.preventDefault();
       
         var email = document.getElementById("email").value;
@@ -37,7 +38,10 @@
             console.log("token:", token)
             alert("Vous êtes connecté !");
             window.location.href = "index.html";
-            afficherLienModale();
+            
+           
+            
+            
            
         })
         .catch((error) => {
@@ -47,6 +51,13 @@
         });
     });
 
+
+// export function getToken() {
+//     // Logique pour récupérer et retourner le token
+//     const token = localStorage.getItem("token");
+//     return token;
+// }
+   
 
 
 
