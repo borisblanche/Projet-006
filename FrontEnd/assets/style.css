@@ -590,17 +590,19 @@ hr {
 }
 
 #imagePreview {
-
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 15px;
-
+	stroke: blue;
+	fill: red;
+}
+.svg{
+	fill:red
 }
 
 .custom-background {
 	color: #CBD6DC;
-
 }
 
 .input-content-image {
@@ -620,7 +622,6 @@ hr {
 }
 
 .nom-element {
-
 	color: black;
 	display: none;
 
@@ -652,7 +653,7 @@ hr {
 	flex-direction: row;
 	justify-content: center;
 	border-radius: 50px;
-	background: #CBD6DC;
+	background: rgb(203, 214, 220);
 	color: #306685;
 	font-family: Work Sans;
 	font-size: 14px;
