@@ -9,7 +9,7 @@ async function afficherProjets() {
   const projets = await getProjets();
 
   const sectionGallery = document.querySelector(".gallery");
-  sectionGallery.innerHTML = ""; // Effacer le contenu précédent de la galerie
+  sectionGallery.innerHTML = ""; 
 
   for (let i = 0; i < projets.length; i++) {
     const mesProjet = projets[i];
@@ -39,7 +39,7 @@ async function afficherProjetsObjets() {
   });
 
   const sectionGallery = document.querySelector(".gallery");
-  sectionGallery.innerHTML = ""; // Effacer le contenu précédent de la galerie
+  sectionGallery.innerHTML = ""; 
 
   for (let i = 0; i < projetsObjets.length; i++) {
     const mesProjet = projetsObjets[i];
@@ -123,9 +123,13 @@ boutonappartements.addEventListener("click", afficherAppartements);
 const boutonhotels = document.querySelector(".btn-hotels");
 boutonhotels.addEventListener("click", afficherHotels);
 
+
+//----------Bouton Modifier----------------//
+
+
  function afficherLienModale() {
   const  token = localStorage.getItem("token");
-  const afficherBtnModifier = document.getElementById("myBtn"); // Remplacez "myBtn" par l'ID réel de votre bouton
+  const afficherBtnModifier = document.getElementById("myBtn");
   
   if (token && afficherBtnModifier) {
     myBtn.classList.remove("hidden");
