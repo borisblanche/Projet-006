@@ -90,7 +90,8 @@ async function supprimerProjetDansAPI(workId) {
       console.log(
         `Projet avec l'ID ${workId} supprimé dans l'API avec succès.`
       );
-      window.location.href = "index.html";
+      const galleryContent = document.querySelector(".gallery-content");
+      galleryContent.style.display = "none";
       // afficherProjets();
     } else if (response.status === 401) {
       console.error(
@@ -316,7 +317,7 @@ async function envoyerPhotoAPI(photoTitle, photoImage, photoCategory) {
       console.log("Photo ajoutée avec succès dans l'API.");
       // Rafraîchir la galerie après l'ajout
       // afficherProjets();
-      window.location.href = "index.html";
+      window.location.reload();
     } else if (response.status === 401) {
       console.error("Échec de l'ajout de la photo : Non autorisé.");
     } else if (response.status === 500) {
