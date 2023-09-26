@@ -28,7 +28,7 @@ async function afficherProjets() {
   }
 }
 
-document.querySelector(".gallery").innerHTML = "";
+// document.querySelector(".gallery").innerHTML = "";
 afficherProjets();
 
 async function afficherProjetsObjets() {
