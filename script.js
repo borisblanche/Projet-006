@@ -2,16 +2,15 @@ async function getProjets() {
   const response = await fetch("http://localhost:5678/api/works");
   const projets = await response.json();
   return projets;
-  
 }
 
 async function afficherProjets() {
   console.log("page chargée");
- 
+
   const projets = await getProjets();
 
   const sectionGallery = document.querySelector(".gallery");
-  sectionGallery.innerHTML = ""; 
+  sectionGallery.innerHTML = "";
 
   for (let i = 0; i < projets.length; i++) {
     const mesProjet = projets[i];
@@ -27,15 +26,9 @@ async function afficherProjets() {
     sectionGallery.appendChild(projetElement);
     projetElement.appendChild(imageElement);
     projetElement.appendChild(nomElement);
-    
   }
- 
- 
 }
 afficherProjets();
-
-// document.querySelector(".gallery").innerHTML = "";
-
 
 async function afficherProjetsObjets() {
   const projets = await getProjets();
@@ -45,7 +38,7 @@ async function afficherProjetsObjets() {
   });
 
   const sectionGallery = document.querySelector(".gallery");
-  sectionGallery.innerHTML = ""; 
+  sectionGallery.innerHTML = "";
 
   for (let i = 0; i < projetsObjets.length; i++) {
     const mesProjet = projetsObjets[i];
@@ -61,7 +54,6 @@ async function afficherProjetsObjets() {
     sectionGallery.appendChild(projetElement);
     projetElement.appendChild(imageElement);
     projetElement.appendChild(nomElement);
-    
   }
 }
 
@@ -73,7 +65,7 @@ async function afficherAppartements() {
   });
 
   const sectionGallery = document.querySelector(".gallery");
-  sectionGallery.innerHTML = ""; 
+  sectionGallery.innerHTML = "";
   for (let i = 0; i < projetAppartements.length; i++) {
     const mesProjet = projetAppartements[i];
 
@@ -99,7 +91,7 @@ async function afficherHotels() {
   });
 
   const sectionGallery = document.querySelector(".gallery");
-  sectionGallery.innerHTML = ""; 
+  sectionGallery.innerHTML = "";
 
   for (let i = 0; i < projetHotels.length; i++) {
     const mesProjet = projetHotels[i];
@@ -130,23 +122,16 @@ boutonappartements.addEventListener("click", afficherAppartements);
 const boutonhotels = document.querySelector(".btn-hotels");
 boutonhotels.addEventListener("click", afficherHotels);
 
-
-
-
 //----------Bouton Modifier----------------//
 
-
- function afficherLienModale() {
-  const  token = localStorage.getItem("token");
+function afficherLienModale() {
+  const token = localStorage.getItem("token");
   const afficherBtnModifier = document.getElementById("myBtn");
-  
+
   if (token && afficherBtnModifier) {
     myBtn.classList.remove("hidden");
-   
   } else {
     myBtn.classList.add("hidden");
   }
 }
 window.addEventListener("load", afficherLienModale);
-
-  
