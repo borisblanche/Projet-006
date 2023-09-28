@@ -2,7 +2,12 @@ async function getProjets() {
   const response = await fetch("http://localhost:5678/api/works");
   const projets = await response.json();
   return projets;
+  console.log
+  
 }
+console.log("fichies recuperes de l api");
+
+
 async function afficherProjets() {
  
   const projets = await getProjets();
@@ -26,9 +31,12 @@ async function afficherProjets() {
     projetElement.appendChild(nomElement);
     
   }
+  console.log("fichiers charges");
  
 }
 afficherProjets();
+// document.querySelector(".gallery").innerHTML = "";
+
 
 async function afficherProjetsObjets() {
   const projets = await getProjets();
@@ -123,6 +131,7 @@ boutonappartements.addEventListener("click", afficherAppartements);
 const boutonhotels = document.querySelector(".btn-hotels");
 boutonhotels.addEventListener("click", afficherHotels);
 
+console.log("btn chargés");
 
 
 //----------Bouton Modifier----------------//
