@@ -2,14 +2,13 @@ async function getProjets() {
   const response = await fetch("http://localhost:5678/api/works");
   const projets = await response.json();
   return projets;
-  
 }
-
 async function afficherProjets() {
+ 
   const projets = await getProjets();
 
   const sectionGallery = document.querySelector(".gallery");
-  sectionGallery.innerHTML = ""; // Effacer le contenu précédent de la galerie
+  sectionGallery.innerHTML = ""; 
 
   for (let i = 0; i < projets.length; i++) {
     const mesProjet = projets[i];
@@ -25,10 +24,10 @@ async function afficherProjets() {
     sectionGallery.appendChild(projetElement);
     projetElement.appendChild(imageElement);
     projetElement.appendChild(nomElement);
+    
   }
+ 
 }
-
-document.querySelector(".gallery").innerHTML = "";
 afficherProjets();
 
 async function afficherProjetsObjets() {
@@ -39,7 +38,7 @@ async function afficherProjetsObjets() {
   });
 
   const sectionGallery = document.querySelector(".gallery");
-  sectionGallery.innerHTML = ""; // Effacer le contenu précédent de la galerie
+  sectionGallery.innerHTML = ""; 
 
   for (let i = 0; i < projetsObjets.length; i++) {
     const mesProjet = projetsObjets[i];
@@ -55,6 +54,7 @@ async function afficherProjetsObjets() {
     sectionGallery.appendChild(projetElement);
     projetElement.appendChild(imageElement);
     projetElement.appendChild(nomElement);
+    
   }
 }
 
@@ -125,18 +125,20 @@ boutonhotels.addEventListener("click", afficherHotels);
 
 
 
-function afficherLienModale() {
-  var token = localStorage.getItem("token");
-  var openModalLink = document.getElementById("openModalLink");
+//----------Bouton Modifier----------------//
 
-  if (token && openModalLink) {
-      openModalLink.classList.remove("hidden");
-  }
-  else {
-    openModalLink.classList.add("hidden");
+
+ function afficherLienModale() {
+  const  token = localStorage.getItem("token");
+  const afficherBtnModifier = document.getElementById("myBtn");
+  
+  if (token && afficherBtnModifier) {
+    myBtn.classList.remove("hidden");
+   
+  } else {
+    myBtn.classList.add("hidden");
   }
 }
+window.addEventListener("load", afficherLienModale);
+
   
-document.addEventListener("DOMContentLoaded", function() {
-  afficherLienModale();
-});
